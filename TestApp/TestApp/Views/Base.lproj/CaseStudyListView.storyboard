@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Case Study List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CaseStudyListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CaseStudyListViewController" customModule="KinCartaTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vkO-ZS-LeR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CaseStudyTableViewCell" rowHeight="240" id="B0f-sk-cWn" customClass="CaseStudyTableViewCell" customModule="KinCartaTestApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="240"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B0f-sk-cWn" id="m4m-Yp-fDk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7B-ui-jcp" userLabel="Container View">
+                                                    <rect key="frame" x="10" y="10" width="394" height="220"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DPn-ed-0qg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="160"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="160" id="Si7-aG-lVU"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uw-bw-bB6">
+                                                            <rect key="frame" x="10" y="170" width="374" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="2Uw-bw-bB6" firstAttribute="leading" secondItem="n7B-ui-jcp" secondAttribute="leading" constant="10" id="1gi-dl-Gyb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2Uw-bw-bB6" secondAttribute="trailing" constant="10" id="BXc-FY-5KY"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DPn-ed-0qg" secondAttribute="trailing" id="MOS-Cz-A5C"/>
+                                                        <constraint firstItem="DPn-ed-0qg" firstAttribute="leading" secondItem="n7B-ui-jcp" secondAttribute="leading" id="QN8-H9-jeh"/>
+                                                        <constraint firstItem="2Uw-bw-bB6" firstAttribute="top" secondItem="DPn-ed-0qg" secondAttribute="bottom" constant="10" id="YE3-9F-KSt"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2Uw-bw-bB6" secondAttribute="bottom" constant="10" id="meP-Jk-9Df"/>
+                                                        <constraint firstItem="DPn-ed-0qg" firstAttribute="top" secondItem="n7B-ui-jcp" secondAttribute="top" id="tOq-EX-Ya1"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="n7B-ui-jcp" firstAttribute="top" secondItem="m4m-Yp-fDk" secondAttribute="top" constant="10" id="1uN-B0-pZP"/>
+                                                <constraint firstItem="n7B-ui-jcp" firstAttribute="leading" secondItem="m4m-Yp-fDk" secondAttribute="leading" constant="10" id="7jm-8n-zMX"/>
+                                                <constraint firstAttribute="bottom" secondItem="n7B-ui-jcp" secondAttribute="bottom" constant="10" id="Gy3-nF-YtE"/>
+                                                <constraint firstAttribute="trailing" secondItem="n7B-ui-jcp" secondAttribute="trailing" constant="10" id="usf-7S-VFe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caseStudyContainerView" destination="n7B-ui-jcp" id="Olo-HM-8Hn"/>
+                                            <outlet property="caseStudyImageView" destination="DPn-ed-0qg" id="yNU-Pl-yL5"/>
+                                            <outlet property="caseStudyTeaserLabel" destination="2Uw-bw-bB6" id="0Vz-kG-7kI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2Y5-I2-ZbC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2yD-ex-5He"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vkO-ZS-LeR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Eye-AR-svA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vkO-ZS-LeR" secondAttribute="bottom" id="TrO-t2-xnE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vkO-ZS-LeR" secondAttribute="trailing" id="jbb-Qx-DU2"/>
+                            <constraint firstItem="vkO-ZS-LeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vMb-TA-2tf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="caseStudyListTableView" destination="vkO-ZS-LeR" id="veX-gd-u3d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
